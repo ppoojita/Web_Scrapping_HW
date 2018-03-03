@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars_Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div clas="container">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Data</a></p>
+    </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1 style="margin-left:1em;"> Latest Mars News </h1>
+
+      <p style="margin-left:3em;"><strong><font size="4">{{ mars.news_title }} </font></strong></p>
+      <p style="margin-left:3em;">{{ mars.p_news}}</p>
+        
+    </div>
+    
+  </div>
+
+  <div class="row">
+      <div class="col-sm-6">
+
+        <h1 style="margin-left:1em;"> Featured Mars Image</h1>
+  
+        <img src= {{ mars.featured_image_url }} width: 50% hspace="30" />
+ 
+      </div>
+
+      <div class="col-sm-6">
+
+
+  
+        <p style="border: 1px solid black" style="margin-right:5em;"><strong><font size="5">Current Weather in Mars </font></strong><br/> {{ mars.mars_weather }}</p>
+        <h1 style="margin-left:4em;"> Mars Facts </h1>
+        <table border=1 style="margin-left:9em;">
+          <tr>
+            <th width=5%> Attributes</th>
+            <th width=5%>Values</th>
+          </tr>
+          <tr>
+            <td>Equatorial Diameter</td>
+            <td>{{ mars.mars_info1[0]['Equatorial Diameter'] }}</td>
+          </tr>
+          <tr>
+              <td>Polar Diameter</td>
+              <td>{{ mars.mars_info1[0]['Polar Diameter'] }}</td>
+            </tr>
+          <tr>
+                <td>Mass</td>
+                <td>{{ mars.mars_info1[0]['Mass'] }}</td>
+          </tr>
+          <tr>
+                  <td>Moons</td>
+                  <td>{{ mars.mars_info1[0]['Moons'] }}</td>
+            </tr>
+          <tr>
+                <td>Orbit Distance</td>
+                <td>{{ mars.mars_info1[0]['Orbit Distance'] }}</td>
+          </tr>
+          <tr>
+              <td>Orbit Period</td>
+              <td>{{ mars.mars_info1[0]['Orbit Period'] }}</td>
+          </tr>
+
+          <tr>
+              <td>Orbit Period</td>
+              <td>{{ mars.mars_info1[0]['Orbit Period'] }}</td>
+          </tr>
+
+          <tr>
+              <td>Surfacr Temperature</td>
+              <td>{{ mars.mars_info1[0]['Surface Temperature'] }}</td>
+          </tr>
+
+          <tr>
+              <td>First Record</td>
+              <td>{{ mars.mars_info1[0]['First Record'] }}</td>
+          </tr>
+
+          <tr>
+              <td>Recorded By</td>
+              <td>{{ mars.mars_info1[0]['Recorded By'] }}</td>
+          </tr>
+
+
+
+          
+        </table>
+        
+        
+    
+      </div>
+      
+  </div>
+
+  <div class="row">
+
+    <h1 style="margin-left:1em;" align="center"> Mars Hemispheres</h1>
+      <div class="col-sm-6">
+
+
+        <img src= {{ mars.hemisphere_image_urls[0]['image_url']}} width= 70% border="3" hspace="75"/>
+        
+        <p style="margin-left:8em;"> <strong> <font size="5">{{ mars.hemisphere_image_urls[0]['title']}} </font></strong></p>
+
+
+ 
+      </div>
+
+      <div class="col-sm-6">
+
+          <img src= {{ mars.hemisphere_image_urls[1]['image_url']}} width= 70% border="3" hspace="30"/>
+          
+          <p style="margin-left:5em;"> <strong><font size="5">{{ mars.hemisphere_image_urls[1]['title']}} </font></strong> </p>
+
+      </div>
+
+  </div>
+
+  <div class="row">
+
+      <!-- <h1 style="margin-left:1em;" align="center"> Mars Hemispheres</h1> -->
+        <div class="col-sm-6">
+  
+  
+          <img src= {{ mars.hemisphere_image_urls[2]['image_url']}} width= 70% border="3" hspace="75"/>
+          
+          <p style="margin-left:8em;"> <strong> <font size="5">{{ mars.hemisphere_image_urls[2]['title']}} </font></strong></p>
+  
+  
+   
+        </div>
+  
+        <div class="col-sm-6">
+  
+            <img src= {{ mars.hemisphere_image_urls[3]['image_url']}} width= 70% border="3" hspace="30"/>
+            
+            <p style="margin-left:5em;"> <strong><font size="5">{{ mars.hemisphere_image_urls[3]['title']}} </font></strong> </p>
+  
+        </div>
+  
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+      
+    
+</body>
+</html>
